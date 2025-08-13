@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevoRythmer - Euclidean Drum Machine</title>
+    <meta name="description" content="Drum machine euclidienne avec interface moderne">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header avec presets euclidiens -->
+        <header class="header">
+            <h1>DevoRythmer <span>(Euclidean Drum Machine)</span></h1>
+            <section class="presets" aria-label="Presets euclidiens">
+                <button class="preset-btn active" aria-label="Preset 1 - Techno">P1</button>
+                <button class="preset-btn" aria-label="Preset 2 - Breakbeat">P2</button>
+                <button class="preset-btn" aria-label="Preset 3 - House">P3</button>
+                <button class="preset-btn" aria-label="Preset 4">P4</button>
+                <button class="preset-btn" aria-label="Preset 5">P5</button>
+                <button class="preset-btn" aria-label="Preset 6">P6</button>
+                <button class="preset-btn" aria-label="Preset 7">P7</button>
+            </section>
+        </header>
+
+        <!-- Section principale -->
+        <main class="main-section">
+            <!-- Contrôles de transport -->
+            <section class="transport" aria-label="Contrôles de lecture">
+                <button id="playBtn" class="play-btn" aria-label="Lecture">PLAY</button>
+                <button id="stopBtn" class="stop-btn" aria-label="Arrêt">STOP</button>
+                <div class="tempo" aria-label="Tempo">120 BPM</div>
+            </section>
+
+            <!-- Séquenceur principal -->
+            <section class="sequencer" aria-label="Séquenceur 16 steps">
+                <!-- Piste Kick -->
+                <article class="track" data-track="kick">
+                    <div class="track-info">
+                        <label>Kick</label>
+                        <button class="track-toggle active" aria-label="Activer/Désactiver Kick">ON</button>
+                    </div>
+                    <div class="steps" role="group" aria-label="Steps Kick">
+                        <div class="step" data-track="kick" data-step="0" role="button" tabindex="0" aria-label="Step 1"></div>
+                        <div class="step" data-track="kick" data-step="1" role="button" tabindex="0" aria-label="Step 2"></div>
+                        <div class="step" data-track="kick" data-step="2" role="button" tabindex="0" aria-label="Step 3"></div>
+                        <div class="step" data-track="kick" data-step="3" role="button" tabindex="0" aria-label="Step 4"></div>
+                        <div class="step" data-track="kick" data-step="4" role="button" tabindex="0" aria-label="Step 5"></div>
+                        <div class="step" data-track="kick" data-step="5" role="button" tabindex="0" aria-label="Step 6"></div>
+                        <div class="step" data-track="kick" data-step="6" role="button" tabindex="0" aria-label="Step 7"></div>
+                        <div class="step" data-track="kick" data-step="7" role="button" tabindex="0" aria-label="Step 8"></div>
+                        <div class="step" data-track="kick" data-step="8" role="button" tabindex="0" aria-label="Step 9"></div>
+                        <div class="step" data-track="kick" data-step="9" role="button" tabindex="0" aria-label="Step 10"></div>
+                        <div class="step" data-track="kick" data-step="10" role="button" tabindex="0" aria-label="Step 11"></div>
+                        <div class="step" data-track="kick" data-step="11" role="button" tabindex="0" aria-label="Step 12"></div>
+                        <div class="step" data-track="kick" data-step="12" role="button" tabindex="0" aria-label="Step 13"></div>
+                        <div class="step" data-track="kick" data-step="13" role="button" tabindex="0" aria-label="Step 14"></div>
+                        <div class="step" data-track="kick" data-step="14" role="button" tabindex="0" aria-label="Step 15"></div>
+                        <div class="step" data-track="kick" data-step="15" role="button" tabindex="0" aria-label="Step 16"></div>
+                    </div>
+                </article>
+
+                <!-- Piste Snare -->
+                <article class="track" data-track="snare">
+                    <div class="track-info">
+                        <label>Snare</label>
+                        <button class="track-toggle active" aria-label="Activer/Désactiver Snare">ON</button>
+                    </div>
+                    <div class="steps" role="group" aria-label="Steps Snare">
+                        <div class="step" data-track="snare" data-step="0" role="button" tabindex="0" aria-label="Step 1"></div>
+                        <div class="step" data-track="snare" data-step="1" role="button" tabindex="0" aria-label="Step 2"></div>
+                        <div class="step" data-track="snare" data-step="2" role="button" tabindex="0" aria-label="Step 3"></div>
+                        <div class="step" data-track="snare" data-step="3" role="button" tabindex="0" aria-label="Step 4"></div>
+                        <div class="step" data-track="snare" data-step="4" role="button" tabindex="0" aria-label="Step 5"></div>
+                        <div class="step" data-track="snare" data-step="5" role="button" tabindex="0" aria-label="Step 6"></div>
+                        <div class="step" data-track="snare" data-step="6" role="button" tabindex="0" aria-label="Step 7"></div>
+                        <div class="step" data-track="snare" data-step="7" role="button" tabindex="0" aria-label="Step 8"></div>
+                        <div class="step" data-track="snare" data-step="8" role="button" tabindex="0" aria-label="Step 9"></div>
+                        <div class="step" data-track="snare" data-step="9" role="button" tabindex="0" aria-label="Step 10"></div>
+                        <div class="step" data-track="snare" data-step="10" role="button" tabindex="0" aria-label="Step 11"></div>
+                        <div class="step" data-track="snare" data-step="11" role="button" tabindex="0" aria-label="Step 12"></div>
+                        <div class="step" data-track="snare" data-step="12" role="button" tabindex="0" aria-label="Step 13"></div>
+                        <div class="step" data-track="snare" data-step="13" role="button" tabindex="0" aria-label="Step 14"></div>
+                        <div class="step" data-track="snare" data-step="14" role="button" tabindex="0" aria-label="Step 15"></div>
+                        <div class="step" data-track="snare" data-step="15" role="button" tabindex="0" aria-label="Step 16"></div>
+                    </div>
+                </article>
+
+                <!-- Piste Hi-Hat -->
+                <article class="track" data-track="hihat">
+                    <div class="track-info">
+                        <label>Hi-Hat</label>
+                        <button class="track-toggle active" aria-label="Activer/Désactiver Hi-Hat">ON</button>
+                    </div>
+                    <div class="steps" role="group" aria-label="Steps Hi-Hat">
+                        <div class="step" data-track="hihat" data-step="0" role="button" tabindex="0" aria-label="Step 1"></div>
+                        <div class="step" data-track="hihat" data-step="1" role="button" tabindex="0" aria-label="Step 2"></div>
+                        <div class="step" data-track="hihat" data-step="2" role="button" tabindex="0" aria-label="Step 3"></div>
+                        <div class="step" data-track="hihat" data-step="3" role="button" tabindex="0" aria-label="Step 4"></div>
+                        <div class="step" data-track="hihat" data-step="4" role="button" tabindex="0" aria-label="Step 5"></div>
+                        <div class="step" data-track="hihat" data-step="5" role="button" tabindex="0" aria-label="Step 6"></div>
+                        <div class="step" data-track="hihat" data-step="6" role="button" tabindex="0" aria-label="Step 7"></div>
+                        <div class="step" data-track="hihat" data-step="7" role="button" tabindex="0" aria-label="Step 8"></div>
+                        <div class="step" data-track="hihat" data-step="8" role="button" tabindex="0" aria-label="Step 9"></div>
+                        <div class="step" data-track="hihat" data-step="9" role="button" tabindex="0" aria-label="Step 10"></div>
+                        <div class="step" data-track="hihat" data-step="10" role="button" tabindex="0" aria-label="Step 11"></div>
+                        <div class="step" data-track="hihat" data-step="11" role="button" tabindex="0" aria-label="Step 12"></div>
+                        <div class="step" data-track="hihat" data-step="12" role="button" tabindex="0" aria-label="Step 13"></div>
+                        <div class="step" data-track="hihat" data-step="13" role="button" tabindex="0" aria-label="Step 14"></div>
+                        <div class="step" data-track="hihat" data-step="14" role="button" tabindex="0" aria-label="Step 15"></div>
+                        <div class="step" data-track="hihat" data-step="15" role="button" tabindex="0" aria-label="Step 16"></div>
+                    </div>
+                </article>
+
+                <!-- Piste Bass -->
+                <article class="track" data-track="bass">
+                    <div class="track-info">
+                        <label>Bass</label>
+                        <button class="track-toggle active" aria-label="Activer/Désactiver Bass">ON</button>
+                    </div>
+                    <div class="steps" role="group" aria-label="Steps Bass">
+                        <div class="step" data-track="bass" data-step="0" role="button" tabindex="0" aria-label="Step 1"></div>
+                        <div class="step" data-track="bass" data-step="1" role="button" tabindex="0" aria-label="Step 2"></div>
+                        <div class="step" data-track="bass" data-step="2" role="button" tabindex="0" aria-label="Step 3"></div>
+                        <div class="step" data-track="bass" data-step="3" role="button" tabindex="0" aria-label="Step 4"></div>
+                        <div class="step" data-track="bass" data-step="4" role="button" tabindex="0" aria-label="Step 5"></div>
+                        <div class="step" data-track="bass" data-step="5" role="button" tabindex="0" aria-label="Step 6"></div>
+                        <div class="step" data-track="bass" data-step="6" role="button" tabindex="0" aria-label="Step 7"></div>
+                        <div class="step" data-track="bass" data-step="7" role="button" tabindex="0" aria-label="Step 8"></div>
+                        <div class="step" data-track="bass" data-step="8" role="button" tabindex="0" aria-label="Step 9"></div>
+                        <div class="step" data-track="bass" data-step="9" role="button" tabindex="0" aria-label="Step 10"></div>
+                        <div class="step" data-track="bass" data-step="10" role="button" tabindex="0" aria-label="Step 11"></div>
+                        <div class="step" data-track="bass" data-step="11" role="button" tabindex="0" aria-label="Step 12"></div>
+                        <div class="step" data-track="bass" data-step="12" role="button" tabindex="0" aria-label="Step 13"></div>
+                        <div class="step" data-track="bass" data-step="13" role="button" tabindex="0" aria-label="Step 14"></div>
+                        <div class="step" data-track="bass" data-step="14" role="button" tabindex="0" aria-label="Step 15"></div>
+                        <div class="step" data-track="bass" data-step="15" role="button" tabindex="0" aria-label="Step 16"></div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- Module ES6 - Point d'entrée -->
+    <script src="js/main.js"></script>
+</body>
+</html>
